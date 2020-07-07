@@ -1,5 +1,8 @@
 from newspaper import Article
 import time
+import sys , os
+
+import json
 
 #article = Article('https://www.nytimes.com/2020/07/06/us/Epidemiologists-coronavirus-protests-quarantine.html?action=click&module=Top%20Stories&pgtype=Homepage')
 #article.download()
@@ -7,16 +10,45 @@ import time
 #print(article.authors)
 #print(article.text)
 
-with open("links-nytimes.txt" , "r") as link_file , open ("content-nytimes.txt" , "w") as content_file:
+# first filename
+i=195
+
+
+with open("links-nytimes.txt" , "r") as link_file :
 	all_lines = link_file.readlines()
 	for link in all_lines:
 		article = Article(link)
 		article.download()
 		time.sleep(2)
 		article.parse()
-		content_file.write("#########################")
-		for author in article.authors:
-			content_file.write(author+",")
-		content_file.write("\n")
-		content_file.write(article.text)
+		article.nlp()
+		article.fetch_images()
 
+		i=i+1
+		filename = f'{i:05}'
+
+		keep = article.meta_data['og']
+		keep['authors'] = article.authors
+		keep['text-link'] = filename
+		keep['images-link'] = list(article.images)
+		keep['publish-date'] = str(article.publish_date)
+		keep['paper'] = 'nytimes'
+
+		with open(filename + ".json", "w") as write_file:
+		    json.dump(keep, write_file)
+
+		with open(filename + ".txt", "w") as write_file:
+			write_file.write(article.text)
+
+		print("wrote " + str(i))
+
+
+######
+#Meta data at ny times
+#keep 'og' dict of meta_data, containing
+#url , type , title, image {identifyer: ...  , alt: ... } , description 
+
+# note that the nyt meta data gives us an image with a description.
+
+# we add authors, a link to the text file for the text of the article , images_link (may be a list of urls) ,  
+# publish date and name of the paper (nytimes)
