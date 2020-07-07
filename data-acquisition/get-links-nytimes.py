@@ -32,4 +32,4 @@ with open("links-nytimes.txt" , "a+") as file:
 # link types collected from beautiful soup
 # /2020/07/06/us/Epidemiologists-coronavirus-protests-quarantine.html
 # https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html
-
+# the interactive stuff is not an article, remove it in data cleaning!
