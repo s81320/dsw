@@ -3,11 +3,12 @@ import time
 import sys , os
 import json
 
-# first filename
-i=0
+# first filename witt be i+1
+# so i should be the latest number given to an article
+i=156
 
 
-with open("links-tsp.txt" , "r") as link_file :
+with open("links-tsp-2020-07-08.txt" , "r") as link_file :
 	all_lines = link_file.readlines()
 	for link in all_lines:
 		article = Article(link)

@@ -25,7 +25,7 @@ link_list = list(set(link_list))
 
 print('wrote links to file: ' , len(link_list))
 
-with open("links-tsp.txt" , "a+") as file:
+with open("links-tsp-2020-07-08.txt" , "w") as file:
 	for link in link_list:
 		file.write(link + '\n')
 
