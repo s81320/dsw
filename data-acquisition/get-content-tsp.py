@@ -8,7 +8,7 @@ import json
 i=156
 
 
-with open("links-tsp-2020-07-08.txt" , "r") as link_file :
+with open("links-tsp-2020-07-08-new.txt" , "r") as link_file :
 	all_lines = link_file.readlines()
 	for link in all_lines:
 		article = Article(link)
@@ -29,15 +29,18 @@ with open("links-tsp-2020-07-08.txt" , "r") as link_file :
 		keep['images-link'] = list(article.images)
 		keep['publish-date'] = str(article.publish_date)
 		keep['paper'] = 'tagesspiegel'
+		keep['id'] = filename[-6:-13]
 
 		with open(filename + ".json", "w") as write_file:
 		    json.dump(keep, write_file)
 
 		with open(filename + ".txt", "w") as write_file:
-			write_file.write(article.text)
+			write_file.write(article.title + '\n' +  article.text)
 
 		print("wrote " + str(i))
 
+# 8.7. added the article id as the numbers in the filename 8888888.html
+# added the title to the text file, so the text file now contains the title and the text.
 		
 # keine direkte artikel id vorhanden, aber html dateien sind als nummern codiert
 #  'url': 'https://www.tagesspiegel.de/politik/kommando-zurueck-was-gegen-die-wiedereinfuehrung-der-wehrpflicht-spricht/25978222.html',

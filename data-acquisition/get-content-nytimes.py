@@ -10,11 +10,12 @@ import json
 #print(article.authors)
 #print(article.text)
 
-# first filename
-i=195
+# first filename will be i+1
+i=40
 
 
-with open("links-nytimes.txt" , "r") as link_file :
+
+with open("links-nytimes-2020-07-08-new.txt" , "r") as link_file :
 	all_lines = link_file.readlines()
 	for link in all_lines:
 		article = Article(link)
@@ -38,7 +39,7 @@ with open("links-nytimes.txt" , "r") as link_file :
 		    json.dump(keep, write_file)
 
 		with open(filename + ".txt", "w") as write_file:
-			write_file.write(article.text)
+			write_file.write(article.title+'\n'+article.text)
 
 		print("wrote " + str(i))
 
