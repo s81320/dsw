@@ -22,7 +22,7 @@ what to do for data cleaning:
 # spell checking
 
 * check for misspelled words and correct them, see lecture 3 
-
+```python
 from sklearn.feature_extraction.text import HashingVectorizer
 import numpy as np
 
@@ -40,3 +40,4 @@ corrections[:10]
 to_replace, replacement = zip(*corrections)
 s = s.replace(to_replace, replacement)
 s
+```
