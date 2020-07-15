@@ -25,7 +25,8 @@ link_list = list(set(link_list))
 
 print('wrote links to file: ' , len(link_list))
 
-with open("links-tsp-2020-07-08.txt" , "w") as file:
+# would be good to have this automated: download to file with date of today.
+with open("links-tsp-2020-07-14.txt" , "w") as file:
 	for link in link_list:
 		file.write(link + '\n')
 

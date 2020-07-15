@@ -11,11 +11,11 @@ import json
 #print(article.text)
 
 # first filename will be i+1
-i=40
+i=65
 
 
 
-with open("links-nytimes-2020-07-08-new.txt" , "r") as link_file :
+with open("links-nytimes-2020-07-12-new.txt" , "r") as link_file :
 	all_lines = link_file.readlines()
 	for link in all_lines:
 		article = Article(link)

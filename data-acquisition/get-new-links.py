@@ -14,8 +14,8 @@ def create_set_link_ids(file_links ):
 
 def main():
 
-	bestands_file = "links-nytimes-2020-07-07.txt" # appears once in code 
-	scraped_file = "links-nytimes-2020-07-08.txt" # appears twice in code and is used to create the name for the output file
+	bestands_file = "links-tsp-bestand.txt" # appears once in code 
+	scraped_file = "links-tsp-2020-07-14.txt" # appears twice in code and is used to create the name for the output file
 
 	ids_bestand = create_set_link_ids(bestands_file)
 	ids_scraped = create_set_link_ids(scraped_file)
