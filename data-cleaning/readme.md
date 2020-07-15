@@ -12,8 +12,7 @@ check automatic data quality testing: https://github.com/awslabs/deequ
 
 what to do for data cleaning:
 * check for date of publication. If missing value, set it to the day it was scraped.
-* check if something is not an 'article', according to meta data.
-* if not article: remove it.
+* check if something is not an 'article', according to meta data. if not article: remove it.
 * check the length of the article. if it is too short (define by number of words): remove it.
 
 * check for missing values of authors. imputation: if no person name is given, put in the name of the newspaper (impute)
@@ -40,4 +39,4 @@ corrections[:10]
 to_replace, replacement = zip(*corrections)
 s = s.replace(to_replace, replacement)
 s
-```
+``
