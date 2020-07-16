@@ -1,0 +1,40 @@
+<!-- #######  THIS IS A COMMENT - Visible only in the source editor #########-->
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+	
+<h2>newsreader with an ML feature</h2>
+<p>Read your news here! We scrape from Tagesspiegel, S&uuml;ddeutsche and Zeit and cluster articles with the KMeans clustering algorithm.</p>
+<p>Choose a cluster and choose a headline... and read your article!</p>
+<form>
+
+<fieldset>
+<legend>Cluster size selection</legend>
+<p><label>Choose your clutser (biggest cluster first, descending in size / nr. of articles)</label></p>
+<p><select id="myList">
+<option value="1">Cluster 1 (biggest)</option>
+<option value="2">Cluser 2</option>
+<option value="3">Cluster 3</option>
+<option value="4">Cluster 4 (smallest)</option>
+</select></p>
+</fieldset>
+
+<fieldset>
+<legend>title selection</legend>
+<div style="height: 100px; width: 500px; border: solid 2px orange; overflow: scroll; overflow-x: hidden; overflow-y: scroll;">
+<p style="height: 200px;">Scroll box automatic set in scroll in vertical scrollbar....<br /><br /> Scroll box automatic set in scroll in vertical scrollbar....<br /><br /> Scroll box automatic set in scroll in vertical scrollbar....<br /><br /> Scroll box automatic set in scroll in vertical scrollbar....</p>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>read your article</legend>
+<div style="height: 400px; width: 500px; border: solid 2px orange; overflow: scroll; overflow-x: hidden; overflow-y: scroll;">
+<p style="height: 200px;">article text lines<br /><br /> article text lines<br /><br />article text lines.<br /><br /> article text lines</p>
+</div>
+</fieldset>
+</form>
+
+</body>
