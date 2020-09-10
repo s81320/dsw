@@ -22,3 +22,5 @@ https://stackoverflow.com/questions/59818805/show-pandas-dataframe-in-an-existin
 
 https://stackoverflow.com/questions/52644035/how-to-show-a-pandas-dataframe-into-a-existing-flask-html-table
 
+https://sarahleejane.github.io/learning/python/2015/08/09/simple-tables-in-webapps-using-flask-and-pandas-with-python.html
+
