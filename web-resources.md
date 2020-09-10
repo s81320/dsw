@@ -12,4 +12,13 @@ https://kavita-ganesan.com/text-preprocessing-tutorial/
 
 # web dev
 ## flask
+
 https://pythonspot.com/flask-web-forms/
+
+## using panda dataframes in flask
+In my workflow I collect and arrange data I want to display on a web page. How do I get this data on the server?
+
+https://stackoverflow.com/questions/59818805/show-pandas-dataframe-in-an-existing-flask-html-table-and-send-in-parameter-for?noredirect=1&lq=1
+
+https://stackoverflow.com/questions/52644035/how-to-show-a-pandas-dataframe-into-a-existing-flask-html-table
+
