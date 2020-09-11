@@ -24,3 +24,7 @@ https://stackoverflow.com/questions/52644035/how-to-show-a-pandas-dataframe-into
 
 https://sarahleejane.github.io/learning/python/2015/08/09/simple-tables-in-webapps-using-flask-and-pandas-with-python.html
 
+## jinja2 in flask
+
+https://ttl255.com/jinja2-tutorial-part-1-introduction-and-variable-substitution/
+
